@@ -1,0 +1,5 @@
+11:30분경부터 정리
+class: css
+id: javascript
+하지만 무조건 class는 css에서 쓰는건 아니다. javascript에서 써도 됨
+class와 id는 지목을 위해서 씀

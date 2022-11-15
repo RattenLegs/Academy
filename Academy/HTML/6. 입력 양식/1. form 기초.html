@@ -1,0 +1,82 @@
+<!--사용자에 대해 입력을 받는 이유는 그 입력값을 활용하기 위해
+    회원제도가 있는 홈페이지를 운영한다면
+    회원가입, 로그인 제공, 이 사람이 회원가입을 한 사람/안한 사람 파악하기 위해
+    
+    사용자가 특정 버튼을 눌렀을 때, 그 입력된 모든 것들이 서버로 전송되어야 함
+    서버로 전송하기 위해 만드는 양식이 form
+    form을 먼저 열고 입력창을 제공해야 데이터를 넘길 수 있음
+-->
+
+<!--
+    필독: form은 한번씩 꼭 봐줘야 함!
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- action: 전송할 정보를 처리할 페이지의 URL, action에 지정된 경로로 날아감
+    지금은 없어서 #으로 둠, # 쓰면 해당 페이지 가장 위로 감-->
+    <form action="#" method="post" autocapitalize="off">
+        <!--주소에 입력정보 묻히는 것: get(디폴트방식)
+        사적인 데이터는 get으로 붙이면 노출되서 post방식으로 하면 요청헤더파일에 숨겨서 보내게 됨-->
+        <!--autocapitalize=자동완성, 디폴트값은 on-->
+
+        아이디: <input type="text" name="id" value="어이"> <br>
+        <!--input도 인라인 요소-->
+        비밀번호: <input type="password" name="pw" required><br>
+        <!--required: '필수사항'
+        이 입력란을 작성하세요-->
+
+        # 성별 <br>
+        <input type="radio" name="gender" value="male"> 남
+        <input type="radio" name="gender" value="female"> 여 <br>
+        <!--서로 같은 radio라는걸 인식하려면 name을 똑같이 맞춰야함
+            (여기서는 gender)
+        그렇지 않으면 남 여 둘다 클릭됨, '5개 중 하나만 선택할때'-->
+
+        * 취미 <br>
+        <input type="checkbox" name="hobby" value="read"> 독서
+        <input type="checkbox" name="hobby" value="sleep"> 수면
+        <input type="checkbox" name="hobby" value="soccer"> 축구
+        <input type="checkbox" name="hobby" value="game"> 게임
+        <!--value를 붙여야 전송시 주소창 정보에서 구분이 가능함
+        여러 개를 선택할 때-->
+
+        <!--Q: 그렇다면 radio타입을 네모로 하고 checkbox 타입을 동그라미로 하거나
+        아이콘을 바꿀 수 있는지?-->
+        <br>
+
+        !자기소개 <br>
+        <textarea name="introduce" cols="30" rows="10"></textarea>
+
+        <input type="email" name="mail" placeholder="이메일을 입력하세요.">
+        <!--email의 경우 @가 없으면 전송되지않음-->
+        <br>
+
+        <input type="file" name="upload">
+        <br>
+
+        <input type="number" name="age" min="0" max="200" placeholder="나이를 입력하세요">
+        <!--질문: min, max 입력한순간 범위가 줄어듬 왜?-->
+        <br>
+
+        <input type="range" min="0" max="10" step="1" value="3">
+        <!--value는 초기값, 나머지 정리, id에도 value 줄수있음, 기본값을 지정하고 싶을때 value 쓰면됨-->
+        <!-- 아이디 기억하고싶을때 value 사용-->
+
+        <br>
+        <input type="submit" value="전송">
+        <!--submit: 서버로 제출-->
+    </form>
+
+</body>
+
+</html>

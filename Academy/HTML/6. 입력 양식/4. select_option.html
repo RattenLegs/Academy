@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <select name="drink">
+            <optgroup label="Coffee">
+                <option value="ame">Americano</option>
+                <option value="esp">Espresso</option>
+                <option value="cl">Caffe Latte</option>
+                <option value="capp">Cappuccino</option>
+            </optgroup>
+<!--사용자에게 보여주는 문자와 서버로 작성하는 문자가 다르면 value 써야함 -->
+            <optgroup label="Juice">
+                <option>Orange Juice</option>
+                <option>Apple Juice</option>
+                <option>Grape Juice</option>
+            </optgroup>
+            <!--포켓몬 1세대 도감 151마리를 다 쳐야하는지?-->
+        </select>
+
+        <br><br><br>
+
+        <input type="text" list="fruits">
+
+        <datalist id="fruits">
+            
+                <option>Apple</option>
+                <option>Orange</option>
+                <option>Mango</option>
+                <option>Pineapple</option>
+                <option>Grape</option>
+            
+        </datalist>
+        <!--datalist는 optgroup이 안되는듯?-->
+    </form>
+
+</body>
+</html>
