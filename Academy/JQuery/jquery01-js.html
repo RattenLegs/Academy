@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="apple" value="사과" style="font-size: 40px;">
+    <input type="text" id="haha" class="melon" value="멜론">
+    <input type="hidden" value="망고">
+</body>
+
+    <script>
+        const $a1 = document.getElementById('apple');
+        //getElementById: id따옴
+        console.log($a1);
+        console.log($a1.attributes[0]);
+        console.log($a1.attributes[1]);
+        console.log($a1.attributes[2]);
+        console.log($a1.attributes[3]);
+
+        console.log('----------------------------------');
+
+        const b1 = document.querySelector('.melon').value;
+        console.log(b1);
+        const b2 = document.querySelector('.melon').id;
+        console.log(b2);
+
+        console.log('----------------------------------');
+
+        const c1 = document.querySelector('input[type=hidden]').value;
+        const c2 = document.querySelector('input[type=text]').value;
+        console.log(c1);
+        console.log(c2); //왜 하나만 나오지?
+
+        const $d1 = document.getElementsByClassName('melon');
+        console.log($d1);
+
+
+    </script>
+
+</html>

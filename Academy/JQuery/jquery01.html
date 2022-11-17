@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 설치 후 명령 -->
+    <script src="lib/jquery-3.6.0.min.js"></script>     
+</head>
+<body>
+
+    <input type="text" id="apple" value="사과">
+    <input type="text" class="melon" value="멜론">
+    <input type="hidden" value="망고">
+
+    <script>      
+        const $a2 = $('#apple'); 
+        //객체 형태로 요소 취득 
+        //>> 그러면 class의 경우 classname에 가깝지않나?
+        //css에서 id는 #를 사용 > 자연스럽게 취득
+        console.log($a2);
+        
+        console.log('----------------------------------');
+
+        const b2 = $('.melon').val();
+        //css에서 클래스는 .을 사용
+        console.log(b2);
+
+        console.log('----------------------------------');
+      
+        const c2 = $('input[type=hidden]').val();
+        console.log(c2);
+
+    </script>
+    
+</body>
+</html>

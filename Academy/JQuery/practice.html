@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="apple" value="사과">
+    <input type="text" class="melon" value="멜론">
+    <input type="hidden" value="망고">
+</body>
+
+    <script>
+        const $a1 = document.getElementById('apple');
+        //getElementById: id따옴
+        console.log($a1);
+
+        console.log('----------------------------------');
+
+        const b1 = document.querySelector('.melon').value;
+        console.log(b1);
+
+        console.log('----------------------------------');
+
+        const c1 = document.querySelector('input[type=hidden]').value;
+        console.log(c1);
+
+        const $d1 = document.getElementsByClassName('melon');
+        console.log($d1);
+
+    </script>
+
+</html>
